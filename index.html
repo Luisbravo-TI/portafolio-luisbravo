@@ -61,12 +61,10 @@
       filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.45));
     }
 
-    .nav-logo span {
-      color: var(--accent);
-    }
-      .nav-links { display: flex; gap: 28px; list-style: none; }
-      .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-      .nav-links a:hover { color: var(--accent); }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
 
     #hero {
       height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -145,6 +143,33 @@
     .contact-form textarea { resize: vertical; min-height: 120px; }
     .contact-form ::placeholder { color: var(--muted); }
 
+    /* ─── MODAL PERSONALIZADO ─── */
+    .modal-overlay {
+      display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(10,10,15,0.85); backdrop-filter: blur(6px);
+      z-index: 1000; justify-content: center; align-items: center;
+    }
+    .modal-card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 16px;
+      padding: 40px 32px; max-width: 400px; width: 90%; text-align: center;
+      box-shadow: 0 20px 40px rgba(108,99,255,0.25);
+      animation: fadeSlide 0.4s ease;
+    }
+    @keyframes fadeSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .modal-icon { font-size: 3rem; color: var(--accent2); margin-bottom: 18px; }
+    .modal-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; }
+    .modal-text { color: var(--muted); font-size: 0.95rem; margin-bottom: 28px; line-height: 1.7; }
+    .modal-text strong { color: var(--text); }
+    .modal-btn { 
+      background: var(--accent); color: white; border: none; padding: 12px 28px;
+      border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .modal-btn:hover { background: #5a52e0; }
+
     footer { text-align: center; padding: 40px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
     footer a { color: var(--accent); text-decoration: none; }
 
@@ -196,93 +221,40 @@
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="project-icon">
-        <i class="fa-solid fa-cart-shopping" style="color:#6c63ff;"></i>
-      </div>
-
+      <div class="project-icon"><i class="fa-solid fa-cart-shopping" style="color:#6c63ff;"></i></div>
       <h3>Innovatech — Tienda Online para Cliente</h3>
-
-      <p>
-        Desarrollo de una tienda online real para un cliente, con catálogo de productos,
-        carrito de compras, gestión de pedidos, panel administrativo y publicación en dominio propio.
-      </p>
-
+      <p>Desarrollo de una tienda online real para un cliente, con catálogo de productos, carrito de compras, gestión de pedidos, panel administrativo y publicación en dominio propio.</p>
       <div class="tags">
-        <span class="tag">React</span>
-        <span class="tag">Node.js</span>
-        <span class="tag">MySQL</span>
-        <span class="tag">Docker</span>
-        <span class="tag">E-commerce</span>
-        <span class="tag">Proyecto publicado</span>
-        <span class="tag">Cliente real</span>   
+        <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">MySQL</span>
+        <span class="tag">Docker</span><span class="tag">E-commerce</span><span class="tag">Proyecto publicado</span><span class="tag">Cliente real</span>
       </div>
-
       <div class="project-links">
-        <a href="https://innovatechec.com/" target="_blank">
-          <i class="fa-solid fa-globe"></i> Ver tienda
-        </a>
-
-        <a href="https://github.com/Luisbravo-TI" target="_blank">
-          <i class="fa-brands fa-github"></i> Código
-        </a>
+        <a href="https://innovatechec.com/" target="_blank"><i class="fa-solid fa-globe"></i> Ver tienda</a>
+        <a href="https://github.com/Luisbravo-TI" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
       </div>
     </div>
 
-    <!-- Mera Ecuador -->
     <div class="project-card">
-      <div class="project-icon">
-        <i class="fa-brands fa-wordpress" style="color:#21759b;"></i>
-      </div>
-
+      <div class="project-icon"><i class="fa-brands fa-wordpress" style="color:#21759b;"></i></div>
       <h3>Mera Ecuador — Sitio Web en WordPress</h3>
-
-      <p>
-        Proyecto web desarrollado en WordPress junto con colaboradores, enfocado en
-        presentar información institucional, turística y de servicios mediante una
-        página administrable y publicada en dominio propio.
-      </p>
-
+      <p>Proyecto web desarrollado en WordPress junto con colaboradores, enfocado en presentar información institucional, turística y de servicios mediante una página administrable y publicada en dominio propio.</p>
       <div class="tags">
-        <span class="tag">WordPress</span>
-        <span class="tag">Diseño Web</span>
-        <span class="tag">Sitio Informativo</span>
-        <span class="tag">Colaborativo</span>
-        <span class="tag">Publicado</span>
+        <span class="tag">WordPress</span><span class="tag">Diseño Web</span><span class="tag">Sitio Informativo</span><span class="tag">Colaborativo</span><span class="tag">Publicado</span>
       </div>
-
       <div class="project-links">
-        <a href="https://meraecuador.com/" target="_blank">
-          <i class="fa-solid fa-globe"></i> Ver sitio
-        </a>
+        <a href="https://meraecuador.com/" target="_blank"><i class="fa-solid fa-globe"></i> Ver sitio</a>
       </div>
     </div>
 
-    <!-- Wuaysa Pamba -->
     <div class="project-card">
-      <div class="project-icon">
-        <i class="fa-solid fa-leaf" style="color:#00d4aa;"></i>
-      </div>
-
+      <div class="project-icon"><i class="fa-solid fa-leaf" style="color:#00d4aa;"></i></div>
       <h3>Wuaysa Pamba — Sitio Web Gastronómico</h3>
-
-      <p>
-        Proyecto web en desarrollo para promocionar la gastronomía ancestral kichwa,
-        platos tradicionales, historia, ubicación y contenido turístico de la
-        asociación Wuaysa Pamba.
-      </p>
-
+      <p>Proyecto web en desarrollo para promocionar la gastronomía ancestral kichwa, platos tradicionales, historia, ubicación y contenido turístico de la asociación Wuaysa Pamba.</p>
       <div class="tags">
-        <span class="tag">React</span>
-        <span class="tag">Vite</span>
-        <span class="tag">Diseño Web</span>
-        <span class="tag">Gastronomía</span>
-        <span class="tag">En desarrollo</span>
+        <span class="tag">React</span><span class="tag">Vite</span><span class="tag">Diseño Web</span><span class="tag">Gastronomía</span><span class="tag">En desarrollo</span>
       </div>
-
       <div class="project-links">
-        <a href="https://waysapamba.com/" target="_blank">
-          <i class="fa-solid fa-globe"></i> Ver avance
-        </a>
+        <a href="https://waysapamba.com/" target="_blank"><i class="fa-solid fa-globe"></i> Ver avance</a>
       </div>
     </div>
 
@@ -290,11 +262,7 @@
       <div class="project-icon"><i class="fa-solid fa-chart-line" style="color:#00d4aa;"></i></div>
       <h3>Dashboard de Inventario</h3>
       <p>Dashboard interactivo con gráficos en tiempo real, filtros dinámicos y métricas de inventario.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">Streamlit</span>
-        <span class="tag">Plotly</span>
-      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Streamlit</span><span class="tag">Plotly</span></div>
       <div class="project-links">
         <a href="https://github.com/Luisbravo-TI/dashboard-inventario" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
       </div>
@@ -304,12 +272,7 @@
       <div class="project-icon"><i class="fa-solid fa-universal-access" style="color:#ff6b9d;"></i></div>
       <h3>AccesibleUI</h3>
       <p>Kit de herramientas de accesibilidad web con WCAG 2.1, lector de pantalla simulado y navegación por teclado.</p>
-      <div class="tags">
-        <span class="tag">HTML</span>
-        <span class="tag">CSS</span>
-        <span class="tag">WCAG 2.1</span>
-        <span class="tag">ARIA</span>
-      </div>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">WCAG 2.1</span><span class="tag">ARIA</span></div>
       <div class="project-links">
         <a href="https://github.com/Luisbravo-TI/accesibilidad-web" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
       </div>
@@ -319,12 +282,7 @@
       <div class="project-icon"><i class="fa-solid fa-server" style="color:#f0a500;"></i></div>
       <h3>API REST — Inventario</h3>
       <p>API RESTful con FastAPI, endpoints CRUD, documentación Swagger automática y autenticación por API Key.</p>
-      <div class="tags">
-        <span class="tag">Python</span>
-        <span class="tag">FastAPI</span>
-        <span class="tag">REST</span>
-        <span class="tag">Swagger</span>
-      </div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">REST</span><span class="tag">Swagger</span></div>
       <div class="project-links">
         <a href="https://github.com/Luisbravo-TI" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
       </div>
@@ -379,12 +337,8 @@
       <p>Me especializo en construir aplicaciones completas — desde el frontend hasta el backend — con énfasis en accesibilidad, rendimiento y buenas prácticas de código.</p>
       <p>Actualmente en búsqueda de oportunidades como <strong>desarrollador web</strong>, <strong>soporte TI</strong> o <strong>freelancer</strong>.</p>
       <div style="margin-top:24px;">
-        <a href="https://github.com/Luisbravo-TI" target="_blank" class="btn btn-outline" style="margin-right:12px;">
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a href="#contacto" class="btn btn-primary">
-          <i class="fa-solid fa-envelope"></i> Contáctame
-        </a>
+        <a href="https://github.com/Luisbravo-TI" target="_blank" class="btn btn-outline" style="margin-right:12px;"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="#contacto" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Contáctame</a>
       </div>
     </div>
     <div class="about-stats">
@@ -406,30 +360,32 @@
       <div class="contact-info">
         <p>Estoy disponible para proyectos freelance, trabajo en relación de dependencia o colaboraciones. Respondo en menos de 24 horas.</p>
         <div class="contact-links">
-          <a href="https://github.com/Luisbravo-TI" target="_blank" class="contact-link">
-            <i class="fa-brands fa-github"></i> github.com/Luisbravo-TI
-          </a>
-          <a href="mailto:luisbravo.ti@gmail.com" class="contact-link">
-            <i class="fa-solid fa-envelope"></i> luisbravo.ti@gmail.com
-          </a>
-          <a href="https://wa.me/593981034809" target="_blank" class="contact-link">
-            <i class="fa-brands fa-whatsapp"></i> +593 98 103 4809
-          </a>
-          <a href="https://www.linkedin.com/in/luis-bravo-a693893a9" target="_blank" class="contact-link">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn — Luis Fernando Bravo
-          </a>
+          <a href="https://github.com/Luisbravo-TI" target="_blank" class="contact-link"><i class="fa-brands fa-github"></i> github.com/Luisbravo-TI</a>
+          <a href="mailto:luisbravo.ti@gmail.com" class="contact-link"><i class="fa-solid fa-envelope"></i> luisbravo.ti@gmail.com</a>
+          <a href="https://wa.me/593981034809" target="_blank" class="contact-link"><i class="fa-brands fa-whatsapp"></i> +593 98 103 4809</a>
+          <a href="https://www.linkedin.com/in/luis-bravo-a693893a9" target="_blank" class="contact-link"><i class="fa-brands fa-linkedin"></i> LinkedIn — Luis Fernando Bravo</a>
         </div>
       </div>
-      <form class="contact-form" onsubmit="sendForm(event)">
-        <input type="text" placeholder="Tu nombre" required />
-        <input type="email" placeholder="Tu correo" required />
-        <input type="text" placeholder="Asunto" />
-        <textarea placeholder="Tu mensaje..."></textarea>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <input type="text" name="asunto" placeholder="Asunto" />
+        <textarea name="mensaje" placeholder="Tu mensaje..." required></textarea>
         <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Enviar mensaje</button>
       </form>
     </div>
   </div>
 </section>
+
+<!-- MODAL DE CONFIRMACIÓN -->
+<div class="modal-overlay" id="modal">
+  <div class="modal-card">
+    <div class="modal-icon"><i class="fa-solid fa-circle-check"></i></div>
+    <h2 class="modal-title">¡Gracias, <span id="modal-nombre"></span>!</h2>
+    <p class="modal-text">Tu mensaje ha sido enviado con éxito. Te responderé personalmente en menos de 24 horas.</p>
+    <button class="modal-btn" onclick="cerrarModal()">Entendido</button>
+  </div>
+</div>
 
 <footer>
   <p><i class="fa-solid fa-code"></i> Desarrollado por <strong>Luis Fernando Bravo</strong> |
@@ -490,14 +446,46 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.3 });
 document.querySelectorAll('.skills-grid').forEach(el => observer.observe(el));
 
-function sendForm(e) {
+/* ─── ENVÍO FORMULARIO CON FormSubmit + MODAL ─── */
+const form = document.getElementById('contact-form');
+const modal = document.getElementById('modal');
+const modalNombre = document.getElementById('modal-nombre');
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  // Tomamos el nombre del primer campo (Tu nombre)
-  const nombreInput = e.target.querySelector('input[type="text"]');
-  const nombre = nombreInput && nombreInput.value.trim() ? nombreInput.value.trim() : 'colega';
-  alert(`¡Gracias, ${nombre}! Tu mensaje ha sido enviado con éxito.\nTe responderé personalmente en menos de 24 horas.`);
-  e.target.reset();
+  
+  const formData = new FormData(form);
+  const nombre = formData.get('nombre')?.trim() || 'colega';
+  
+  try {
+    const response = await fetch('https://formsubmit.co/luisbravo.ti@gmail.com', {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      // Mostrar modal con el nombre
+      modalNombre.textContent = nombre;
+      modal.style.display = 'flex';
+      form.reset();
+    } else {
+      alert('Hubo un pequeño error al enviar. Intenta de nuevo o escríbeme directamente a luisbravo.ti@gmail.com');
+    }
+  } catch (err) {
+    alert('Error de conexión. Por favor inténtalo más tarde.');
+  }
+});
+
+function cerrarModal() {
+  modal.style.display = 'none';
+  modalNombre.textContent = '';
 }
+
+// Cierra el modal al hacer clic fuera de la tarjeta
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) cerrarModal();
+});
 </script>
 </body>
 </html>
