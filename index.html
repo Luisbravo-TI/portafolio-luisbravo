@@ -228,7 +228,7 @@
       </div>
     </div>
 
-    <!-- NUEVA TARJETA: Mera Ecuador -->
+    <!-- Mera Ecuador -->
     <div class="project-card">
       <div class="project-icon">
         <i class="fa-brands fa-wordpress" style="color:#21759b;"></i>
@@ -257,7 +257,7 @@
       </div>
     </div>
 
-    <!-- NUEVA TARJETA: Wuaysa Pamba -->
+    <!-- Wuaysa Pamba -->
     <div class="project-card">
       <div class="project-icon">
         <i class="fa-solid fa-leaf" style="color:#00d4aa;"></i>
@@ -388,7 +388,6 @@
       </div>
     </div>
     <div class="about-stats">
-      <!-- ESTADÍSTICA ACTUALIZADA -->
       <div class="stat-card"><div class="stat-num">6+</div><div class="stat-label">Proyectos realizados</div></div>
       <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Años estudiando dev</div></div>
       <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Tecnologías dominadas</div></div>
@@ -493,7 +492,10 @@ document.querySelectorAll('.skills-grid').forEach(el => observer.observe(el));
 
 function sendForm(e) {
   e.preventDefault();
-  alert('¡Mensaje enviado! Te respondo pronto.');
+  // Tomamos el nombre del primer campo (Tu nombre)
+  const nombreInput = e.target.querySelector('input[type="text"]');
+  const nombre = nombreInput && nombreInput.value.trim() ? nombreInput.value.trim() : 'colega';
+  alert(`¡Gracias, ${nombre}! Tu mensaje ha sido enviado con éxito.\nTe responderé personalmente en menos de 24 horas.`);
   e.target.reset();
 }
 </script>
