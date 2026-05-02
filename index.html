@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Luis Fernando Bravo — Developer & IT Specialist</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Portafolio de Luis Fernando Bravo — Desarrollador IT. Proyectos reales en e-commerce, WordPress, APIs, accesibilidad y más. Disponible para trabajo freelance o en relación de dependencia." />
+  <meta name="keywords" content="desarrollador web, Python, JavaScript, React, WordPress, accesibilidad, portafolio, Luis Bravo, IT, soporte TI" />
+  <meta name="author" content="Luis Fernando Bravo" />
+  
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="Luis Fernando Bravo — Developer & IT Specialist" />
+  <meta property="og:description" content="Construyo aplicaciones web, APIs y dashboards con Python, JavaScript y herramientas modernas. Mira mis proyectos reales." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://luisbravo.dev" />
+  <meta property="og:image" content="https://luisbravo.dev/images/preview.png" />
+  
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/favicon.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <style>
@@ -26,10 +42,31 @@
       border-bottom: 1px solid var(--border);
       padding: 16px 40px; display: flex; justify-content: space-between; align-items: center;
     }
-    .nav-logo { font-size: 1.2rem; font-weight: 700; color: var(--accent); letter-spacing: 1px; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--accent); }
+    .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    }
+
+    .logo-img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      border-radius: 10px;
+      filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.45));
+    }
+
+    .nav-logo span {
+      color: var(--accent);
+    }
+      .nav-links { display: flex; gap: 28px; list-style: none; }
+      .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+      .nav-links a:hover { color: var(--accent); }
 
     #hero {
       height: 100vh; display: flex; align-items: center; justify-content: center;
@@ -122,7 +159,10 @@
 <body>
 
 <nav>
-  <div class="nav-logo">LF.Bravo</div>
+  <a href="#hero" class="nav-logo">
+  <img src="images/logo-luis-bravo.png" alt="Logo Luis Bravo" class="logo-img">
+  <span>Luis Bravo</span>
+  </a>  
   <ul class="nav-links">
     <li><a href="#proyectos">Proyectos</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -152,20 +192,97 @@
 <section id="proyectos">
   <p class="section-title">Mis <span>Proyectos</span></p>
   <div class="divider"></div>
-  <p class="section-sub">Aplicaciones reales construidas con tecnologías modernas</p>
+  <p class="section-sub">Proyectos reales, colaborativos y en desarrollo para clientes, negocios y soluciones digitales</p>
   <div class="projects-grid">
 
     <div class="project-card">
-      <div class="project-icon"><i class="fa-solid fa-cart-shopping" style="color:#6c63ff;"></i></div>
-      <h3>E-commerce Platform</h3>
-      <p>Tienda online completa con carrito de compras, gestión de productos y panel administrativo.</p>
-      <div class="tags">
-        <span class="tag">HTML/CSS/JS</span>
-        <span class="tag">Python</span>
-        <span class="tag">Bootstrap</span>
+      <div class="project-icon">
+        <i class="fa-solid fa-cart-shopping" style="color:#6c63ff;"></i>
       </div>
+
+      <h3>Innovatech — Tienda Online para Cliente</h3>
+
+      <p>
+        Desarrollo de una tienda online real para un cliente, con catálogo de productos,
+        carrito de compras, gestión de pedidos, panel administrativo y publicación en dominio propio.
+      </p>
+
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Docker</span>
+        <span class="tag">E-commerce</span>
+        <span class="tag">Proyecto publicado</span>
+        <span class="tag">Cliente real</span>   
+      </div>
+
       <div class="project-links">
-        <a href="https://github.com/Luisbravo-TI" target="_blank"><i class="fa-brands fa-github"></i> Código</a>
+        <a href="https://innovatechec.com/" target="_blank">
+          <i class="fa-solid fa-globe"></i> Ver tienda
+        </a>
+
+        <a href="https://github.com/Luisbravo-TI" target="_blank">
+          <i class="fa-brands fa-github"></i> Código
+        </a>
+      </div>
+    </div>
+
+    <!-- NUEVA TARJETA: Mera Ecuador -->
+    <div class="project-card">
+      <div class="project-icon">
+        <i class="fa-brands fa-wordpress" style="color:#21759b;"></i>
+      </div>
+
+      <h3>Mera Ecuador — Sitio Web en WordPress</h3>
+
+      <p>
+        Proyecto web desarrollado en WordPress junto con colaboradores, enfocado en
+        presentar información institucional, turística y de servicios mediante una
+        página administrable y publicada en dominio propio.
+      </p>
+
+      <div class="tags">
+        <span class="tag">WordPress</span>
+        <span class="tag">Diseño Web</span>
+        <span class="tag">Sitio Informativo</span>
+        <span class="tag">Colaborativo</span>
+        <span class="tag">Publicado</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://meraecuador.com/" target="_blank">
+          <i class="fa-solid fa-globe"></i> Ver sitio
+        </a>
+      </div>
+    </div>
+
+    <!-- NUEVA TARJETA: Wuaysa Pamba -->
+    <div class="project-card">
+      <div class="project-icon">
+        <i class="fa-solid fa-leaf" style="color:#00d4aa;"></i>
+      </div>
+
+      <h3>Wuaysa Pamba — Sitio Web Gastronómico</h3>
+
+      <p>
+        Proyecto web en desarrollo para promocionar la gastronomía ancestral kichwa,
+        platos tradicionales, historia, ubicación y contenido turístico de la
+        asociación Wuaysa Pamba.
+      </p>
+
+      <div class="tags">
+        <span class="tag">React</span>
+        <span class="tag">Vite</span>
+        <span class="tag">Diseño Web</span>
+        <span class="tag">Gastronomía</span>
+        <span class="tag">En desarrollo</span>
+      </div>
+
+      <div class="project-links">
+        <a href="https://waysapamba.com/" target="_blank">
+          <i class="fa-solid fa-globe"></i> Ver avance
+        </a>
       </div>
     </div>
 
@@ -271,7 +388,8 @@
       </div>
     </div>
     <div class="about-stats">
-      <div class="stat-card"><div class="stat-num">4+</div><div class="stat-label">Proyectos en GitHub</div></div>
+      <!-- ESTADÍSTICA ACTUALIZADA -->
+      <div class="stat-card"><div class="stat-num">6+</div><div class="stat-label">Proyectos realizados</div></div>
       <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Años estudiando dev</div></div>
       <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Tecnologías dominadas</div></div>
       <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">Compromiso con el código</div></div>
